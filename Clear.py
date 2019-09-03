@@ -1,31 +1,3 @@
-# ClearScript
-Python 版项目文件夹&文件自动清理脚本，自定义你的清理规则。
-
-Python version of the project folder & file auto-cleanup script, customize your cleanup rules.
-
-## Usage
-
-在 Windows 下运行 ExecClear.bat ，其内容如下：
-
-```
-python %cd%/Clear.py %cd%
-pause
-```
-
-或者指定目录在 Python 中运行，例如：ClearCatalog('C:\Users\Juwan\Documents\GitHub\ClearScript') 。
-
-## Rule
-
-```python
-# 声明欲删除的文件后缀名集合 Declares the collection of file suffixes to delete
-DelFiles=['pyc', 'tmp', 'map', 'lst', 'sdf', 'log', 'db', 'o', 'd', 'crf']
-# 声明欲删除的文件夹名集合 Declares the collection of folder names to delete
-DelFolders=['ipch', 'Debug', 'Release', 'output', 'html', 'rtf', 'latex', 'OBJ', 'Coordinator', 'EndDeviceCollect', 'EndDeviceEB', 'RouterEB']
-```
-
-## Source
-
-```python
 #coding=utf-8
 
 import os,sys
@@ -82,5 +54,3 @@ if __name__ == '__main__':
         print( 'please add argv path : %s ' % sys.argv[0]) # %cd%
         sys.exit(1)
     ClearCatalog(sys.argv[1])
-```
-
